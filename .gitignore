@@ -1,0 +1,5 @@
+node_modules/
+*.png
+!dist/icon-192.png
+!dist/icon-512.png
+previous-version.html
