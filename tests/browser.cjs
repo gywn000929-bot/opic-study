@@ -17,16 +17,15 @@ await p.goto('http://127.0.0.1:4174/#grammar');
 assert.equal(await p.locator('.grammar-tile').count(),24);
 const beforeRun=await p.evaluate(()=>localStorage.getItem('opic-pocket-v2-run-v3'));
 await p.locator('#grammarBasics summary').click();await p.locator('[data-grammar-unit="sentence"]').last().click();
-assert.equal(await p.locator('.grammar-example').count(),2);
-await p.locator('[data-grammar-quiz]').click();
+assert.equal(await p.locator('[data-grammar-answer]').count(),3);
 await p.locator('[data-grammar-answer]').filter({hasText:'I music listen to every day.'}).click();
 assert.match(await p.locator('#grammarFeedback').innerText(),/문법 오답/);
 await p.locator('#grammarHome').click();await p.locator('#grammarReview').click();
 await p.locator('[data-grammar-answer]').filter({hasText:'I listen to music every day.'}).click();
 await p.locator('#grammarNext').click();await p.locator('#grammarHome').click();
-assert.equal(await p.locator('#grammarReview').count(),0);
+assert.equal(await p.locator('#grammarReview').isDisabled(),true);
 const units=await p.evaluate(()=>JSON.parse(document.getElementById('content').textContent).grammarUnits);
-for(const u of units.filter(u=>!u.advanced)){await p.locator('#grammarBasics summary').click();await p.locator('[data-grammar-unit="'+u.id+'"]').last().click();await p.locator('[data-grammar-quiz]').click();for(const q of u.questions){const opts=p.locator('[data-grammar-answer]');const texts=await opts.allTextContents();const idx=texts.findIndex(t=>t.slice(1).trim()===q[1][0]);assert.ok(idx>=0);await opts.nth(idx).click();assert.match(await p.locator('#grammarFeedback').innerText(),/잘 이해/);await p.locator('#grammarNext').click();}await p.locator('#grammarHome').click();}
+for(const u of units.filter(u=>!u.advanced)){await p.locator('#grammarBasics summary').click();await p.locator('[data-grammar-unit="'+u.id+'"]').last().click();for(const q of u.questions){const opts=p.locator('[data-grammar-answer]');const texts=await opts.allTextContents();const idx=texts.findIndex(t=>t.slice(1).trim()===q[1][0]);assert.ok(idx>=0);await opts.nth(idx).click();assert.match(await p.locator('#grammarFeedback').innerText(),/정답이에요/);await p.locator('#grammarNext').click();}await p.locator('#grammarHome').click();}
 await p.reload();assert.equal(await p.evaluate(()=>Object.values(JSON.parse(localStorage.getItem('opic-pocket-v2')).grammar.answers).filter(v=>v===true).length),36);
 assert.equal(await p.evaluate(()=>localStorage.getItem('opic-pocket-v2-run-v3')),beforeRun);
 await p.setViewportSize({width:320,height:740});assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await p.locator('#grammarBasics summary').click();await p.locator('[data-grammar-unit="perfect"]').click();assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await p.screenshot({path:'/workspace/opic/grammar-mobile.png',fullPage:true});
