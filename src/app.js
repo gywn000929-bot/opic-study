@@ -8,8 +8,8 @@ const KEY='opic-pocket-v2';const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const labels={word:'단어',phrase:'표현',sentence:'문장',listen:'듣기 이해',strategy:'답변 전략',flow:'답변 흐름'};
 const localDay=(d=new Date())=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
-const defaults=()=>({version:2,grammar:{answers:{}},done:{},stars:{},wrong:{},srs:{},activity:{},drafts:{},theme:'light',font:16,goal:60,lastTopic:'all'});
-function validState(x){if(!x||x.version!==2)throw Error('백업 형식을 확인해 주세요.');const out=defaults();if(x.grammar?.answers&&typeof x.grammar.answers==='object'){for(const [id,v] of Object.entries(x.grammar.answers)){if(grammarIds.has(id)&&typeof v==='boolean')out.grammar.answers[id]=v;}}for(const field of ['done','stars','wrong','drafts','srs']){if(!x[field]||typeof x[field]!=='object'||Array.isArray(x[field]))continue;for(const [id,v]of Object.entries(x[field])){if(!byId.has(id))continue;if(field==='drafts'){if(typeof v==='string')out[field][id]=v.slice(0,20000)}else if(field==='srs'){if(v&&Number.isFinite(v.due)&&Number.isFinite(v.interval)&&v.interval>=0)out[field][id]={due:v.due,interval:Math.min(v.interval,365)}}else if(v===true)out[field][id]=true;}}if(x.activity&&typeof x.activity==='object')for(const [d,v]of Object.entries(x.activity)){if(/^\d{4}-\d{2}-\d{2}$/.test(d)&&Array.isArray(v))out.activity[d]=[...new Set(v.filter(id=>byId.has(id)||grammarIds.has(id)))];}out.theme=x.theme==='dark'?'dark':'light';out.font=[16,18,20].includes(x.font)?x.font:16;out.goal=[30,60,90].includes(x.goal)?x.goal:60;out.lastTopic=topics.some(t=>t.id===x.lastTopic)?x.lastTopic:'all';return out;}
+const defaults=()=>({version:2,grammar:{answers:{}},done:{},stars:{},wrong:{},srs:{},activity:{},drafts:{},theme:'light',font:16,sidebarCollapsed:false,goal:60,lastTopic:'all'});
+function validState(x){if(!x||x.version!==2)throw Error('백업 형식을 확인해 주세요.');const out=defaults();if(x.grammar?.answers&&typeof x.grammar.answers==='object'){for(const [id,v] of Object.entries(x.grammar.answers)){if(grammarIds.has(id)&&typeof v==='boolean')out.grammar.answers[id]=v;}}for(const field of ['done','stars','wrong','drafts','srs']){if(!x[field]||typeof x[field]!=='object'||Array.isArray(x[field]))continue;for(const [id,v]of Object.entries(x[field])){if(!byId.has(id))continue;if(field==='drafts'){if(typeof v==='string')out[field][id]=v.slice(0,20000)}else if(field==='srs'){if(v&&Number.isFinite(v.due)&&Number.isFinite(v.interval)&&v.interval>=0)out[field][id]={due:v.due,interval:Math.min(v.interval,365)}}else if(v===true)out[field][id]=true;}}if(x.activity&&typeof x.activity==='object')for(const [d,v]of Object.entries(x.activity)){if(/^\d{4}-\d{2}-\d{2}$/.test(d)&&Array.isArray(v))out.activity[d]=[...new Set(v.filter(id=>byId.has(id)||grammarIds.has(id)))];}out.theme=x.theme==='dark'?'dark':'light';out.font=[13,14,16,18,20].includes(x.font)?x.font:16;out.sidebarCollapsed=x.sidebarCollapsed===true;out.goal=[30,60,90].includes(x.goal)?x.goal:60;out.lastTopic=topics.some(t=>t.id===x.lastTopic)?x.lastTopic:'all';return out;}
 let state=defaults(),storageOK=true;try{const saved=localStorage.getItem(KEY);if(saved)state=validState(JSON.parse(saved));}catch{storageOK=false;}
 let filterTopic=state.lastTopic,filterKind='all',filterScope='all',mask=false,query='',limit=24,view='',session=null,practiceTopic=state.lastTopic,toastTimer;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch{storageOK=false;notify('저장 공간을 사용할 수 없어요. 설정에서 기록을 백업해 주세요.');}}
@@ -23,7 +23,7 @@ function streak(){let n=0,d=new Date();if(!state.activity[localDay(d)]?.length)d
 function topicName(id){return topics.find(t=>t.id===id)?.title||'전체 주제';}
 function countMap(m){return Object.keys(m).filter(k=>m[k]&&(m!==state.done||cards.some(c=>c.id===k))).length;}
 function todayCount(){return state.activity[localDay()]?.length||0;}
-function applySettings(){document.body.classList.toggle('dark',state.theme==='dark');document.documentElement.style.fontSize=state.font+'px';$('theme').setAttribute('aria-label',state.theme==='dark'?'라이트 모드 켜기':'다크 모드 켜기');$('fontSize').value=state.font;$('dailyGoal').value=state.goal;}
+function applySettings(){document.body.classList.toggle('dark',state.theme==='dark');document.documentElement.style.fontSize=state.font+'px';$('theme').setAttribute('aria-label',state.theme==='dark'?'라이트 모드 켜기':'다크 모드 켜기');$('fontSize').value=state.font;$('dailyGoal').value=state.goal;applySidebar();}
 const navItems=[['home','⌂','오늘의 학습'],['library','▤','표현 도서관'],['practice','▦','집중 훈련'],['grammar','Aa','문법 학습실'],['review','↻','복습 노트'],['progress','▥','학습 기록']];
 function nav(){const html=navItems.map(([id,icon,title])=>`<a class="nav-item ${view===id?'active':''}" href="#${id}" ${view===id?'aria-current="page"':''}><span class="nav-icon" aria-hidden="true">${icon}</span><span>${title}</span></a>`).join('');$('nav').innerHTML=html;$('mobileNav').innerHTML=html;$('breadcrumb').textContent=navItems.find(n=>n[0]===view)?.[2]||'조용한 연습';}
 function go(route){if(location.hash==='#'+route)render();else location.hash=route;}
@@ -92,6 +92,45 @@ switch(b.id){case'clearFilters':filterTopic='all';filterScope='all';filterKind='
 document.addEventListener('change',e=>{switch(e.target.id){case'topicFilter':filterTopic=e.target.value;practiceTopic=filterTopic;state.lastTopic=filterTopic;save();limit=24;library();break;case'scopeFilter':filterScope=e.target.value;limit=24;library();break;case'practiceTopic':practiceTopic=e.target.value;break;}});
 $('theme').onclick=()=>{state.theme=state.theme==='dark'?'light':'dark';applySettings();save();};$('settingsButton').onclick=()=>{$('settings').showModal();};$('closeSettings').onclick=()=>$('settings').close();$('fontSize').onchange=e=>{state.font=Number(e.target.value);applySettings();save();};$('dailyGoal').onchange=e=>{state.goal=Number(e.target.value);save();if(view==='home'&&!session)home();};
 $('export').onclick=()=>{const payload={...state,stories:{}};for(let i=0;i<stories.length;i++){try{payload.stories[i]=localStorage.getItem(KEY+'-story-'+i)||'';}catch{}}const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='opic-pocket-'+localDay()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};$('import').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>5e6)throw Error('백업 파일은 5MB 이하여야 합니다.');const raw=JSON.parse(await file.text()),next=validState(raw);if(!confirm('백업 파일의 기록으로 현재 학습 기록을 대체할까요?'))return;state=next;clearRun();save();for(let i=0;i<stories.length;i++){try{if(typeof raw.stories?.[i]==='string')localStorage.setItem(KEY+'-story-'+i,raw.stories[i].slice(0,20000));else localStorage.removeItem(KEY+'-story-'+i);}catch{}}applySettings();render();notify('학습 기록을 가져왔어요.');}catch(err){notify(err.message||'파일을 읽지 못했어요.');}finally{e.target.value='';}};
+const sidebarMedia=window.matchMedia('(max-width:800px)');
+let mobileSidebarOpen=false;
+function applySidebar(){
+ const mobile=sidebarMedia.matches,open=mobile?mobileSidebarOpen:!state.sidebarCollapsed;
+ document.body.classList.toggle('sidebar-collapsed',!mobile&&!open);
+ document.body.classList.toggle('sidebar-open',mobile&&open);
+ $('sidebar').inert=!open;
+ $('sidebar').setAttribute('aria-hidden',String(!open));
+ $('sidebarToggle').setAttribute('aria-expanded',String(open));
+ $('sidebarToggle').setAttribute('aria-label',open?'사이드바 닫기':'사이드바 열기');
+ $('sidebarToggle').title=open?'사이드바 닫기':'사이드바 열기';
+ $('sidebarBackdrop').hidden=!(mobile&&open);
+ document.querySelector('.app').inert=mobile&&open;
+ $('mobileNav').inert=mobile&&open;
+ if(mobile&&open){$('sidebar').setAttribute('role','dialog');$('sidebar').setAttribute('aria-modal','true');}
+ else{$('sidebar').removeAttribute('role');$('sidebar').removeAttribute('aria-modal');}
+}
+function setSidebar(open){
+ if(sidebarMedia.matches)mobileSidebarOpen=open;
+ else{state.sidebarCollapsed=!open;save();}
+ applySidebar();
+ if(sidebarMedia.matches&&open)$('sidebarClose').focus();
+ else if(!open)$('sidebarToggle').focus();
+}
+$('sidebarToggle').onclick=()=>setSidebar($('sidebarToggle').getAttribute('aria-expanded')!=='true');
+$('sidebarClose').onclick=() =>setSidebar(false);
+$('sidebarBackdrop').onclick=() =>setSidebar(false);
+$('sidebar').addEventListener('click',e=>{if(sidebarMedia.matches&&e.target.closest('a'))setSidebar(false);});
+sidebarMedia.addEventListener('change',()=>{const inside=$('sidebar').contains(document.activeElement);mobileSidebarOpen=false;applySidebar();if(inside&&$('sidebar').inert)$('sidebarToggle').focus();});
+document.addEventListener('keydown',e=>{
+ if(!sidebarMedia.matches||!mobileSidebarOpen)return;
+ if(e.key==='Escape'){e.preventDefault();setSidebar(false);return;}
+ if(e.key==='Tab'){
+  const items=[...$('sidebar').querySelectorAll('a[href],button:not(:disabled)')],first=items[0],last=items[items.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+ }
+});
+
 let installEvent;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvent=e;$('install').hidden=false;});$('install').onclick=async()=>{if(installEvent){await installEvent.prompt();installEvent=null;$('install').hidden=true;}};
 if('serviceWorker'in navigator&&/^https?:$/.test(location.protocol)){window.addEventListener('load',()=>{navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(()=>{$('offlineStatus').textContent='오프라인 학습 준비가 완료되었어요. 이 기기에서 다시 열 수 있습니다.';}).catch(()=>{$('offlineStatus').textContent='오프라인 저장을 완료하지 못했어요. HTML 파일을 내려받아 사용해 주세요.';});});}
 window.addEventListener('hashchange',()=>{if('speechSynthesis'in window&&speechSynthesis.speaking)speechSynthesis.cancel();render();window.scrollTo({top:0});});applySettings();render();if(!storageOK)notify('저장된 기록을 읽지 못했어요. 설정에서 백업을 확인해 주세요.');
