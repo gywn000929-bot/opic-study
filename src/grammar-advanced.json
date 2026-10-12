@@ -199,7 +199,954 @@
         ],
         "was waiting은 배경, started는 그때 발생한 사건입니다.",
         "chunks"
+      ],
+      [
+        "어젯밤 설거지하는 도중 정전이 났습니다. I ___ the dishes when the lights went out.",
+        [
+          "was washing",
+          "had washed",
+          "am washing"
+        ],
+        "정전이 난 순간 진행 중이던 행동은 과거진행형으로 표현해요.",
+        "context"
+      ],
+      [
+        "회의가 시작되기 전 보고서를 이미 다 읽었습니다. When the meeting started, I ___ the report.",
+        [
+          "had already read",
+          "was still reading",
+          "will read"
+        ],
+        "회의 시작보다 앞선 완료를 had already read로 나타내요.",
+        "context"
+      ],
+      [
+        "문을 열자 누군가 방 안에서 노래하고 있었습니다. When I opened the door, someone ___ inside.",
+        [
+          "was singing",
+          "will sing",
+          "has sung"
+        ],
+        "문을 연 시점에 진행 중이던 배경은 was singing이에요.",
+        "context"
+      ],
+      [
+        "휴대폰이 울려 잠에서 깼습니다. I ___ when my phone rang.",
+        [
+          "was sleeping",
+          "have slept",
+          "will sleep"
+        ],
+        "잠을 자던 중 울렸으므로 배경 행동은 과거진행형이에요.",
+        "context"
+      ],
+      [
+        "어제의 행동을 순서대로 말하세요. I paid the bill, ___ my coat, and left.",
+        [
+          "put on",
+          "had put on",
+          "was putting on"
+        ],
+        "계산 → 외투 착용 → 출발이라는 사건 나열은 단순과거가 자연스러워요.",
+        "context"
+      ],
+      [
+        "요리 수업에 갔지만 재료를 집에 두고 온 사실을 깨달았습니다. I realized I ___ the ingredients at home.",
+        [
+          "had left",
+          "am leaving",
+          "will leave"
+        ],
+        "깨달은 시점보다 재료를 놓고 나온 일이 먼저예요.",
+        "context"
+      ],
+      [
+        "‘작년 여름에 부산에 갔다’는 끝난 여행을 말하세요.",
+        [
+          "I went to Busan last summer.",
+          "I have gone to Busan last summer.",
+          "I go to Busan last summer."
+        ],
+        "last summer처럼 끝난 과거 시점을 명시하면 단순과거를 써요.",
+        "context"
+      ],
+      [
+        "그때 두 행동이 동시에 진행됐습니다. While I was packing, my sister ___ the tickets.",
+        [
+          "was printing",
+          "will print",
+          "has printed"
+        ],
+        "짐을 싸는 배경과 나란히 진행된 행동을 과거진행으로 묶어요.",
+        "context"
+      ],
+      [
+        "강의를 들으러 갔는데 강사가 10분 전에 떠났습니다. By the time I arrived, the instructor ___.",
+        [
+          "had left",
+          "is leaving",
+          "will leave"
+        ],
+        "도착이라는 과거 기준보다 떠난 일이 먼저 완료됐어요.",
+        "context"
+      ],
+      [
+        "어제는 노트북을 두 시간 사용한 뒤 껐습니다. I ___ for two hours and then turned it off.",
+        [
+          "used my laptop",
+          "have used my laptop",
+          "use my laptop"
+        ],
+        "완결된 사용 시간을 사건 전체로 말할 때 단순과거가 적절해요.",
+        "context"
+      ],
+      [
+        "과거 이야기의 첫 장면입니다. ‘비가 내리고 사람들은 뛰어다니고 있었다.’",
+        [
+          "It was raining, and people were running around.",
+          "It rains, and people run around.",
+          "It will rain, and people will run around."
+        ],
+        "이야기 속 한 시점의 진행 중인 장면을 두 과거진행으로 그려요.",
+        "context"
+      ],
+      [
+        "나는 그전에 전시회에 가 본 적이 없어 장소가 낯설었습니다. It felt unfamiliar because I ___ there before.",
+        [
+          "had never been",
+          "will never be",
+          "am never going"
+        ],
+        "과거에 낯설게 느낀 시점까지의 경험 부재는 had never been이에요.",
+        "context"
+      ],
+      [
+        "집에 왔을 때 동생은 이미 식사를 끝냈습니다. When I got home, my brother ___.",
+        [
+          "had already eaten",
+          "was about to eat",
+          "was eating"
+        ],
+        "이미 끝낸 식사는 had already eaten이며, 나머지는 식사 전이나 진행 중이에요.",
+        "context"
+      ],
+      [
+        "계단을 내려가던 중 지갑을 떨어뜨렸습니다. I dropped my wallet while I ___ downstairs.",
+        [
+          "was walking",
+          "will walk",
+          "have walked"
+        ],
+        "지갑을 떨어뜨린 짧은 사건의 배경은 걷는 중이던 행동이에요.",
+        "context"
+      ],
+      [
+        "호텔에 도착해서 체크인하고 방에 올라갔습니다. 가장 자연스러운 사건 나열은?",
+        [
+          "I arrived, checked in, and went upstairs.",
+          "I arrive, check in, and went upstairs.",
+          "I arrived, checking in, and go upstairs."
+        ],
+        "같은 과거 시간대의 사건을 과거형으로 일관되게 나열해요.",
+        "context"
+      ],
+      [
+        "불평하기 전 이미 직원에게 두 번 연락했다고 강조하세요. I ___ the staff twice before I complained.",
+        [
+          "had contacted",
+          "will contact",
+          "am contacting"
+        ],
+        "불평한 시점보다 앞서 완료된 연락 횟수를 과거완료로 드러내요.",
+        "context"
+      ],
+      [
+        "고장 난 이유를 과거 시점에서 되돌아봅니다. The machine stopped because someone ___ it.",
+        [
+          "had unplugged",
+          "will unplug",
+          "is unplugging"
+        ],
+        "전원을 뽑은 일이 기계가 멈춘 결과보다 앞선 원인이에요.",
+        "context"
+      ],
+      [
+        "어제 저녁 8시 그 순간에는 퇴근길 운전 중이었습니다. At eight last night, I ___ home.",
+        [
+          "was driving",
+          "will drive",
+          "have driven"
+        ],
+        "특정 과거 순간 진행 중이던 동작은 was driving이에요.",
+        "context"
+      ],
+      [
+        "택시에서 내린 뒤 가방이 없음을 알았습니다. I noticed that I ___ my bag in the taxi.",
+        [
+          "had left",
+          "will leave",
+          "am leaving"
+        ],
+        "알아차리기 전에 두고 내린 일을 과거완료로 연결해요.",
+        "context"
+      ],
+      [
+        "어제 카페에서 커피를 주문했고 곧 이름을 불렀습니다. I ordered a coffee, and then the barista ___ my name.",
+        [
+          "called",
+          "has called",
+          "will call"
+        ],
+        "then으로 이어지는 다음 과거 사건은 called예요.",
+        "context"
+      ],
+      [
+        "공연이 시작된 뒤에도 계속 줄을 서고 있었다는 장면은?",
+        [
+          "We were still waiting in line when the show started.",
+          "We had finished waiting before the show started.",
+          "We will wait in line when the show starts."
+        ],
+        "were still waiting은 공연 시작 시점에도 대기가 진행 중이었다는 뜻이에요.",
+        "context"
+      ],
+      [
+        "과거에 이사한 시점을 기준으로 그전 거주 경험을 말하세요. Before I moved to Seoul, I ___ in a small town for ten years.",
+        [
+          "had lived",
+          "will live",
+          "am living"
+        ],
+        "과거의 이사 이전까지 이어진 거주를 had lived로 돌아봐요.",
+        "context"
+      ],
+      [
+        "친구가 도착할 때 나는 아직 음식을 만들고 있었습니다. I ___ dinner when my friend arrived.",
+        [
+          "was still making",
+          "had already finished",
+          "will make"
+        ],
+        "아직 만드는 중이므로 완료가 아니라 진행이 핵심이에요.",
+        "context"
+      ],
+      [
+        "시험지를 받고 나서 준비물을 안 가져온 것을 알았습니다. I realized I ___ my calculator.",
+        [
+          "had forgotten",
+          "will forget",
+          "am forgetting"
+        ],
+        "깨달은 순간보다 먼저 발생한 망각을 had forgotten으로 말해요.",
+        "context"
+      ],
+      [
+        "산책 중 갑자기 개가 짖기 시작했습니다. We ___ through the park when a dog started barking.",
+        [
+          "were walking",
+          "have walked",
+          "will walk"
+        ],
+        "진행 중인 산책과 새로 시작된 짖는 사건을 구별해요.",
+        "context"
+      ],
+      [
+        "어제 책을 끝까지 읽은 결과를 분명히 말하세요.",
+        [
+          "I finished the book yesterday.",
+          "I was reading the book yesterday.",
+          "I read books every day."
+        ],
+        "finished는 끝냈다는 결과를 명시해요. was reading만으로 완독은 알 수 없어요.",
+        "context"
+      ],
+      [
+        "면접 장소를 찾은 시점에 이미 약속 시간이 지났습니다. When I found the office, the interview ___.",
+        [
+          "had already started",
+          "will start",
+          "starts tomorrow"
+        ],
+        "장소를 찾기 전에 시작된 사건을 had already started로 표현해요.",
+        "context"
+      ],
+      [
+        "어제 아침의 반복 없는 한 사건입니다. The alarm ___ at six yesterday morning.",
+        [
+          "rang",
+          "rings",
+          "has rung"
+        ],
+        "yesterday morning이라는 끝난 시간의 사건에는 rang을 써요.",
+        "context"
+      ],
+      [
+        "옛 친구를 만났는데 마지막으로 본 뒤 5년이 지났습니다. I ___ her for five years when we met again.",
+        [
+          "had not seen",
+          "will not see",
+          "am not seeing"
+        ],
+        "과거 재회 시점까지 만나지 못한 기간을 had not seen으로 나타내요.",
+        "context"
+      ],
+      [
+        "당시 문이 왜 열리지 않았는지 설명하세요. I could not get in because I ___ the wrong key.",
+        [
+          "had brought",
+          "will bring",
+          "am bringing"
+        ],
+        "들어가지 못한 과거 상황의 앞선 원인은 잘못된 열쇠를 가져온 일이에요.",
+        "context"
+      ],
+      [
+        "과거 시점에 진행 중인 통화 때문에 벨을 못 들었습니다. I did not hear the bell because I ___ on the phone.",
+        [
+          "was talking",
+          "will talk",
+          "have talked"
+        ],
+        "벨이 울린 순간 통화 중이었으므로 was talking이 적절해요.",
+        "context"
+      ],
+      [
+        "밤 9시 전에 숙제를 끝냈음을 분명히 표현하세요. By nine that evening, I ___ my homework.",
+        [
+          "had finished",
+          "will finish",
+          "am finishing"
+        ],
+        "by와 과거 기준 시점은 그때까지 이미 완료된 일을 나타내는 데 쓰여요.",
+        "context"
+      ],
+      [
+        "“When I arrived, Mina was leaving.”에서 확실한 것은?",
+        [
+          "내가 도착한 순간 미나는 떠나는 중이었다.",
+          "내가 도착하기 훨씬 전에 미나가 떠났다.",
+          "미나가 다음 날 떠날 예정이다."
+        ],
+        "was leaving은 도착 순간의 진행 장면이며 떠난 완료 시점을 확정하지 않아요.",
+        "meaning"
+      ],
+      [
+        "“When I arrived, Mina had left.”가 나타내는 순서는?",
+        [
+          "미나가 떠남 → 내가 도착함",
+          "내가 도착함 → 미나가 떠남",
+          "두 일이 반드시 동시에 일어남"
+        ],
+        "had left는 도착보다 앞서 떠난 일이 완료됐다는 뜻이에요.",
+        "meaning"
+      ],
+      [
+        "“I was writing an email at noon.”만으로 알 수 없는 것은?",
+        [
+          "이메일을 끝까지 썼는지",
+          "정오에 글을 쓰는 중이었는지",
+          "과거의 한 순간을 말하는지"
+        ],
+        "진행형은 그 순간의 활동을 보여 주지만 최종 완료를 보장하지 않아요.",
+        "meaning"
+      ],
+      [
+        "“I wrote three emails yesterday.”에서 초점은?",
+        [
+          "어제 완결된 세 통의 작성",
+          "어제 특정 순간에 쓰던 배경",
+          "현재까지 끝나지 않은 작성"
+        ],
+        "완성한 수량과 끝난 시점을 제시해 사건을 전체로 보는 문장이에요.",
+        "meaning"
+      ],
+      [
+        "“While I was studying, my roommate was watching TV.”의 관계는?",
+        [
+          "두 행동이 겹쳐 진행됐다.",
+          "공부가 완전히 끝난 뒤 TV 시청이 시작됐다.",
+          "TV 시청은 미래의 계획이다."
+        ],
+        "두 과거진행은 같은 시간대에 겹친 배경 행동을 나타내요.",
+        "meaning"
+      ],
+      [
+        "“I had breakfast and left.”의 had를 어떻게 이해하나요?",
+        [
+          "have breakfast의 단순과거다.",
+          "had 뒤에 오는 모든 표현은 과거완료다.",
+          "과거의 의무를 나타낸다."
+        ],
+        "과거완료는 had + 과거분사예요. breakfast는 명사이므로 여기서는 식사했다는 뜻이에요.",
+        "meaning"
+      ],
+      [
+        "“I had had breakfast before I left.”에서 두 had의 역할은?",
+        [
+          "첫 had는 완료 조동사, 둘째 had는 have의 과거분사다.",
+          "두 had 모두 주어다.",
+          "같은 단어가 반복됐으므로 항상 틀리다."
+        ],
+        "had + 과거분사라는 구조에서 have의 과거분사도 had라서 반복될 수 있어요.",
+        "meaning"
+      ],
+      [
+        "“After I locked the door, I walked away.”는 왜 자연스러운가요?",
+        [
+          "after가 두 사건의 순서를 분명히 해 준다.",
+          "모든 과거 사건에는 반드시 had가 필요하다.",
+          "walked가 현재 시제이기 때문이다."
+        ],
+        "연결어로 순서가 명확하면 과거완료 없이 단순과거를 쓸 수 있어요.",
+        "meaning"
+      ],
+      [
+        "“I was crossing the street when I saw him.”에서 중심 사건은?",
+        [
+          "그를 본 일",
+          "길을 건너기 시작한 정확한 시각",
+          "미래에 그를 만날 계획"
+        ],
+        "was crossing은 배경, saw는 그 배경에서 발생한 주요 사건이에요.",
+        "meaning"
+      ],
+      [
+        "“When I opened the fridge, the milk had gone bad.”의 시간 관계는?",
+        [
+          "냉장고를 열기 전에 우유가 상했다.",
+          "냉장고를 열었기 때문에 즉시 우유가 상했다.",
+          "우유는 아직 상하지 않았다."
+        ],
+        "열기라는 과거 기준보다 앞선 변화가 had gone bad예요.",
+        "meaning"
+      ],
+      [
+        "“The rain stopped, so we went outside.”를 과거완료 없이 말해도 될까요?",
+        [
+          "가능하다. 문장 자체가 결과와 순서를 연결한다.",
+          "불가능하다. 먼저 일어난 일은 무조건 had가 필요하다.",
+          "불가능하다. 비에는 과거형을 쓸 수 없다."
+        ],
+        "단순과거와 so만으로 비가 멎은 뒤 나간 흐름을 충분히 전달할 수 있어요.",
+        "meaning"
+      ],
+      [
+        "“I knew the answer.”와 “I was knowing the answer.” 중 일반적인 표현은?",
+        [
+          "I knew the answer.",
+          "I was knowing the answer.",
+          "두 번째만 자연스럽다."
+        ],
+        "know처럼 상태를 나타내는 동사는 이 의미에서 보통 진행형을 쓰지 않아요.",
+        "meaning"
+      ],
+      [
+        "“He was being rude.”가 “He was rude.”보다 강조할 수 있는 것은?",
+        [
+          "그때 보인 일시적인 무례한 행동",
+          "그가 태어날 때부터 가진 성격만",
+          "그의 미래 계획"
+        ],
+        "being rude는 그 순간의 행동에 초점을 둘 수 있어요. 모든 상태 동사가 진행형 불가능한 것은 아니에요.",
+        "meaning"
+      ],
+      [
+        "“I was thinking about the trip.”에서 진행형을 쓴 이유는?",
+        [
+          "여행을 생각하는 활동이 그때 진행 중이었기 때문이다.",
+          "think는 언제나 진행형만 써야 하기 때문이다.",
+          "여행을 이미 마쳤다는 뜻이기 때문이다."
+        ],
+        "생각하는 활동의 think는 진행형이 가능하며 의견을 가진 상태의 think와 달라요.",
+        "meaning"
+      ],
+      [
+        "“I was staying at a hotel when we met.”에서 호텔 숙박은?",
+        [
+          "만났던 시점을 둘러싼 임시 배경이다.",
+          "만난 뒤에만 시작되는 미래 계획이다.",
+          "만난 순간에 반드시 끝났다."
+        ],
+        "그때 머무르던 일시적 상황을 과거진행형으로 배경 처리해요.",
+        "meaning"
+      ],
+      [
+        "“I had booked the room, but the hotel could not find my name.”에서 had booked의 역할은?",
+        [
+          "이름을 못 찾은 상황보다 예약이 먼저 완료됐음을 보여 준다.",
+          "지금 예약하고 있음을 보여 준다.",
+          "예약을 앞으로 할 예정임을 보여 준다."
+        ],
+        "과거 문제 상황의 배경 원인을 설명하려고 더 이전 일을 돌아봐요.",
+        "meaning"
+      ],
+      [
+        "“I was still waiting when the bus finally came.”가 강조하는 장면은?",
+        [
+          "버스가 왔을 때 기다리는 중이던 상황",
+          "버스가 오기 전에 이미 기다림을 끝낸 상황",
+          "버스가 오지 않을 미래 상황"
+        ],
+        "was waiting은 버스 도착 순간의 대기 장면에 초점을 둬요. still은 그때까지도 대기 중이었다는 점을 강조해요.",
+        "meaning"
+      ],
+      [
+        "“She dropped her cup while she was laughing.”에서 웃음과 컵 낙하의 관계는?",
+        [
+          "웃고 있던 중 컵을 떨어뜨렸다.",
+          "컵을 떨어뜨린 다음에만 웃었다.",
+          "컵을 떨어뜨리기 전에 웃음을 반드시 끝냈다."
+        ],
+        "while절이 진행 배경을 만들고 dropped가 그 안의 사건을 나타내요.",
+        "meaning"
+      ],
+      [
+        "“I had never tried sushi before that dinner.”의 기준은?",
+        [
+          "그 저녁 식사 이전까지의 경험",
+          "지금 이후의 계획",
+          "내일 저녁의 일정"
+        ],
+        "과거완료 경험은 지금이 아니라 문맥 속 과거 시점까지를 기준으로 해요.",
+        "meaning"
+      ],
+      [
+        "“Yesterday, I went shopping.”에 앞선 과거 사건이 없을 때 had gone으로 바꾸면?",
+        [
+          "돌아볼 과거 기준이 추가로 필요해질 수 있다.",
+          "어떤 문맥에서도 반드시 더 정확해진다.",
+          "문장 길이만 늘고 시간 관점은 같다."
+        ],
+        "과거완료는 다른 과거 기준과의 관계를 보여 주므로 단순히 고급 표현으로 바꾸는 용도가 아니에요.",
+        "meaning"
+      ],
+      [
+        "“I was cook when the doorbell rang.”에서 cook을 어떻게 고칠까요?",
+        [
+          "cooking",
+          "cooked",
+          "had cook"
+        ],
+        "과거진행은 was/were + 동사-ing 형태예요.",
+        "repair"
+      ],
+      [
+        "“I had went home before the storm.”에서 went를 고치세요.",
+        [
+          "gone",
+          "going",
+          "goes"
+        ],
+        "과거완료의 had 뒤에는 과거분사 gone이 와요.",
+        "repair"
+      ],
+      [
+        "“We was waiting outside.”의 수정은?",
+        [
+          "We were waiting outside.",
+          "We did waiting outside.",
+          "We had waiting outside."
+        ],
+        "복수 주어 we의 과거진행에는 were를 써요.",
+        "repair"
+      ],
+      [
+        "“Did you went there yesterday?”의 수정은?",
+        [
+          "Did you go there yesterday?",
+          "Did you gone there yesterday?",
+          "Did you going there yesterday?"
+        ],
+        "did가 과거를 표시하므로 뒤 동사는 원형 go예요.",
+        "repair"
+      ],
+      [
+        "“I did not knew the address.”의 수정은?",
+        [
+          "I did not know the address.",
+          "I did not known the address.",
+          "I did not knowing the address."
+        ],
+        "부정문에서도 did not 뒤에는 동사원형을 써요.",
+        "repair"
+      ],
+      [
+        "“By the time we arrived, the film has started.”를 과거 도착 기준에 맞추세요.",
+        [
+          "has를 had로 바꾼다.",
+          "arrived를 arriving으로 바꾼다.",
+          "started를 start로만 바꾼다."
+        ],
+        "과거 도착보다 앞선 시작이므로 현재완료가 아닌 과거완료를 써요.",
+        "repair"
+      ],
+      [
+        "“While I watched TV, my phone rings.”를 과거의 진행 배경과 사건으로 고치세요.",
+        [
+          "While I was watching TV, my phone rang.",
+          "While I watching TV, my phone rang.",
+          "While I was watch TV, my phone rings."
+        ],
+        "was watching으로 배경을, rang으로 그때 일어난 사건을 나타내요.",
+        "repair"
+      ],
+      [
+        "“They had ate before I arrived.”의 수정은?",
+        [
+          "They had eaten before I arrived.",
+          "They had eating before I arrived.",
+          "They had eat before I arrived."
+        ],
+        "eat의 과거분사는 eaten이에요.",
+        "repair"
+      ],
+      [
+        "“I was not hear the announcement.”를 ‘방송을 못 들었다’로 고치세요.",
+        [
+          "I did not hear the announcement.",
+          "I was not heard the announcement.",
+          "I did not heard the announcement."
+        ],
+        "일반동사 hear의 과거 부정문은 did not hear예요.",
+        "repair"
+      ],
+      [
+        "“She had already took a taxi.”의 수정은?",
+        [
+          "She had already taken a taxi.",
+          "She had already taking a taxi.",
+          "She had already take a taxi."
+        ],
+        "take의 과거분사는 taken이에요.",
+        "repair"
+      ],
+      [
+        "“When I saw him, he were running.”의 수정은?",
+        [
+          "When I saw him, he was running.",
+          "When I saw him, he did running.",
+          "When I saw him, he had running."
+        ],
+        "단수 주어 he에는 was running을 써요.",
+        "repair"
+      ],
+      [
+        "“I was knowing him well back then.”을 일반적인 상태 표현으로 고치세요.",
+        [
+          "I knew him well back then.",
+          "I knowing him well back then.",
+          "I did knew him well back then."
+        ],
+        "알고 지냈다는 상태의 know는 단순과거 knew가 자연스러워요.",
+        "repair"
+      ],
+      [
+        "“I had wrote the address down.”의 수정은?",
+        [
+          "I had written the address down.",
+          "I had writing the address down.",
+          "I had write the address down."
+        ],
+        "write의 과거분사는 written이에요.",
+        "repair"
+      ],
+      [
+        "“We were wait when it started raining.”의 수정은?",
+        [
+          "We were waiting when it started raining.",
+          "We were waited when it started raining.",
+          "We were waits when it started raining."
+        ],
+        "기다리는 중이라는 진행에는 waiting이 필요해요.",
+        "repair"
+      ],
+      [
+        "“She didn't brought her ticket.”의 수정은?",
+        [
+          "She didn't bring her ticket.",
+          "She didn't bringing her ticket.",
+          "She didn't brings her ticket."
+        ],
+        "didn't 뒤에는 bring의 원형이 와요.",
+        "repair"
+      ],
+      [
+        "“By the time I called, they had leave.”의 수정은?",
+        [
+          "By the time I called, they had left.",
+          "By the time I called, they had leaving.",
+          "By the time I called, they had leaves."
+        ],
+        "leave의 과거분사는 left이며 전화 전에 떠났다는 뜻이에요.",
+        "repair"
+      ],
+      [
+        "“Yesterday I buy a coat and wore it home.”에서 buy를 고치세요.",
+        [
+          "bought",
+          "buying",
+          "have buy"
+        ],
+        "어제의 연속 사건이므로 bought와 wore를 나란히 써요.",
+        "repair"
+      ],
+      [
+        "“The café was closed because the owner had became ill.”의 수정은?",
+        [
+          "became를 become으로 바꾼다.",
+          "became를 becoming으로 바꾼다.",
+          "had를 has로 바꾸기만 한다."
+        ],
+        "become은 과거형 became, 과거분사 become이에요.",
+        "repair"
+      ],
+      [
+        "“I had not saw the message before I left.”의 수정은?",
+        [
+          "I had not seen the message before I left.",
+          "I had not seeing the message before I left.",
+          "I had not see the message before I left."
+        ],
+        "과거완료 부정형은 had not + 과거분사 seen이에요.",
+        "repair"
+      ],
+      [
+        "“At that moment, the children was playing.”의 수정은?",
+        [
+          "At that moment, the children were playing.",
+          "At that moment, the children did playing.",
+          "At that moment, the children had playing."
+        ],
+        "children은 복수이므로 were playing을 써요.",
+        "repair"
+      ],
+      [
+        "비가 시작된 순간 진행 중이던 산책을 조립하세요.",
+        [
+          "We were walking",
+          "along the river",
+          "when",
+          "it started raining."
+        ],
+        "were walking이 배경, started가 그 배경에서 발생한 사건이에요.",
+        "chunks"
+      ],
+      [
+        "호텔 도착 전에 예약이 취소됐다는 사실을 조립하세요.",
+        [
+          "By the time we arrived,",
+          "the hotel",
+          "had canceled",
+          "our reservation."
+        ],
+        "도착보다 앞선 취소를 had canceled로 표시해요.",
+        "chunks"
+      ],
+      [
+        "문을 잠근 뒤 출발한 순차적 행동을 조립하세요.",
+        [
+          "I locked the door,",
+          "picked up my bag,",
+          "and",
+          "left for work."
+        ],
+        "동작 순서가 분명한 사건 나열에서는 단순과거로 충분해요.",
+        "chunks"
+      ],
+      [
+        "자고 있던 중 경보가 울린 장면을 조립하세요.",
+        [
+          "I was sleeping",
+          "when",
+          "the fire alarm",
+          "went off."
+        ],
+        "was sleeping은 진행 배경, went off는 새로 발생한 사건이에요.",
+        "chunks"
+      ],
+      [
+        "청소가 끝난 뒤 손님이 도착했다는 의미로 조립하세요.",
+        [
+          "When the guests arrived,",
+          "I",
+          "had already cleaned",
+          "the living room."
+        ],
+        "already와 과거완료가 손님 도착 전 청소 완료를 보여 줘요.",
+        "chunks"
+      ],
+      [
+        "음악을 듣는 동안 동생이 요리하고 있었다고 조립하세요.",
+        [
+          "While I was listening to music,",
+          "my brother",
+          "was cooking",
+          "dinner."
+        ],
+        "두 과거진행은 같은 시간대에 겹치는 행동을 그려요.",
+        "chunks"
+      ],
+      [
+        "메뉴를 읽고 음식을 주문한 순서로 조립하세요.",
+        [
+          "I read the menu,",
+          "chose a dish,",
+          "and",
+          "placed my order."
+        ],
+        "순서대로 일어난 세 사건은 단순과거로 나열해요.",
+        "chunks"
+      ],
+      [
+        "버스가 올 때 아직 기다리는 중이었다고 조립하세요.",
+        [
+          "We were still waiting",
+          "at the stop",
+          "when",
+          "the bus finally arrived."
+        ],
+        "still waiting이 버스 도착 순간까지 이어진 배경이에요.",
+        "chunks"
+      ],
+      [
+        "티켓을 잃어버려 입장하지 못했다는 의미로 조립하세요.",
+        [
+          "I could not enter",
+          "because",
+          "I had lost",
+          "my ticket."
+        ],
+        "들어가지 못한 과거 상황보다 표를 잃어버린 일이 먼저예요.",
+        "chunks"
+      ],
+      [
+        "문자를 보냈지만 친구가 이미 잠들었다고 조립하세요.",
+        [
+          "I sent her a message,",
+          "but",
+          "she had already",
+          "fallen asleep."
+        ],
+        "메시지 전 잠든 상태를 had fallen asleep으로 표현해요.",
+        "chunks"
+      ],
+      [
+        "가게가 닫힐 때까지 쇼핑 중이었다는 장면을 조립하세요.",
+        [
+          "I was still shopping",
+          "when",
+          "the store",
+          "closed."
+        ],
+        "closed라는 기준 순간의 진행 행동을 was still shopping으로 말해요.",
+        "chunks"
+      ],
+      [
+        "이사 전에 그 동네를 한 번도 방문하지 않았다고 조립하세요.",
+        [
+          "Before I moved there,",
+          "I",
+          "had never visited",
+          "that neighborhood."
+        ],
+        "과거 이사 이전까지의 경험 부재는 had never visited예요.",
+        "chunks"
+      ],
+      [
+        "운전 중 출구를 지나친 장면을 조립하세요.",
+        [
+          "I was talking to my friend",
+          "while driving,",
+          "and",
+          "I missed the exit."
+        ],
+        "was talking이 지속 배경, missed가 그 안에서 생긴 사건이에요.",
+        "chunks"
+      ],
+      [
+        "직원이 도착하기 전에 문제를 해결했다고 조립하세요.",
+        [
+          "By the time the technician arrived,",
+          "we",
+          "had solved",
+          "the problem."
+        ],
+        "도착이라는 기준보다 해결이 먼저 완료됐어요.",
+        "chunks"
+      ],
+      [
+        "요리를 시작한 후 재료가 없음을 알았다는 순서로 조립하세요.",
+        [
+          "I started cooking,",
+          "opened the fridge,",
+          "and",
+          "noticed we had no eggs."
+        ],
+        "시간순으로 발생한 행동을 단순과거로 이어 가요. had no eggs의 had는 소유를 뜻해요.",
+        "chunks"
+      ],
+      [
+        "아침에 휴대폰을 두고 와 전화를 못 받았다고 조립하세요.",
+        [
+          "I missed the call",
+          "because",
+          "I had left my phone",
+          "at home that morning."
+        ],
+        "전화를 놓친 이유를 더 이전의 일로 되돌아가 설명해요.",
+        "chunks"
+      ],
+      [
+        "화면을 보던 순간 갑자기 멈췄다는 장면을 조립하세요.",
+        [
+          "I was watching a video",
+          "when",
+          "the screen",
+          "suddenly froze."
+        ],
+        "과거진행의 배경에서 갑자기 발생한 멈춤은 froze로 표현해요.",
+        "chunks"
+      ],
+      [
+        "경기를 보러 왔을 때 이미 끝났다는 상황을 조립하세요.",
+        [
+          "When we reached the stadium,",
+          "the game",
+          "had already",
+          "ended."
+        ],
+        "도착 전에 끝난 결과는 had already ended예요.",
+        "chunks"
+      ],
+      [
+        "직원이 재고를 확인하는 동안 기다렸다고 조립하세요.",
+        [
+          "I waited at the counter",
+          "while",
+          "the employee",
+          "was checking the stock."
+        ],
+        "waited는 기다린 사건 전체, was checking은 그때 진행된 배경이에요.",
+        "chunks"
+      ],
+      [
+        "비행기를 탄 뒤 여권을 찾지 못해 두려웠다고 조립하세요.",
+        [
+          "I felt nervous",
+          "because",
+          "I had put my passport",
+          "in the wrong pocket."
+        ],
+        "과거 감정의 원인을 앞선 행동 had put으로 연결해요.",
+        "chunks"
       ]
+    ],
+    "sets": [
+      "사건과 배경 구별",
+      "과거 시점에 맞춰 선택",
+      "시간 관계와 의미 판단",
+      "시제 오류 바로잡기",
+      "문장으로 연결하기"
     ]
   },
   {
