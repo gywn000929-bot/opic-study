@@ -5,6 +5,8 @@ const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const content=JSON.parse(read('src/content.json'));
 content.grammarUnits=[...JSON.parse(read('src/grammar-advanced.json')),...JSON.parse(read('src/grammar.json'))];
 if(content.grammarUnits.length!==24)throw Error('Expected 24 grammar units');
+const advanced=content.grammarUnits.filter(u=>u.advanced);
+if(advanced.length!==12||advanced.some(u=>u.questions.length!==100||u.sets.length!==5))throw Error('Expected 12 advanced units, 100 questions and 5 sets each');
 content.lessons=JSON.parse(read('src/lessons.json'));
 if(content.lessons.length!==12)throw Error('Expected 12 IH practice scenarios');
 if(content.topics.length!==20||content.cards.length!==1000)throw Error('Unexpected content count');
